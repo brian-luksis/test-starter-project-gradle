@@ -15,6 +15,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class DataUtil {
+    private DataUtil() {}
 
     private final static ObjectMapper jsonMapper = new ObjectMapper();
 

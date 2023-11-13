@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class WebDriverFactory {
 
+    private WebDriverFactory() {}
+
     static {
         WebDriverManager.chromedriver().setup();
         WebDriverManager.firefoxdriver().setup();
