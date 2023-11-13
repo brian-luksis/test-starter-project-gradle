@@ -1,4 +1,7 @@
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,6 +30,22 @@ public class WebDriverFactory {
 
     public static WebDriver firefox() {
         return chrome(new DesiredCapabilities());
+    }
+
+    public static IOSDriver ios(Capabilities caps) {
+        return new IOSDriver(caps);
+    }
+
+    public static IOSDriver ios() {
+        return new IOSDriver(new DesiredCapabilities());
+    }
+
+    public static AndroidDriver android(Capabilities caps) {
+        return new AndroidDriver(caps);
+    }
+
+    public static AndroidDriver android() {
+        return new AndroidDriver(new DesiredCapabilities());
     }
 
 }
