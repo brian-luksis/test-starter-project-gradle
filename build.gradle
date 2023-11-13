@@ -39,3 +39,7 @@ test {
         }
     }
 }
+
+wrapper {
+    gradleVersion = '7.6.2'
+}
